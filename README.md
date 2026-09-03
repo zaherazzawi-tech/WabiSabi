@@ -10,12 +10,15 @@ Push to the existing repo → Vercel auto-deploys. Files belong at repo ROOT.
 FULL menu transcribed from the photographed menu (Aug 2026), tabbed
 Dinner / Lunch / Sushi & Rolls. ~160 items.
 
-### Transcription flags — have the owner confirm these 4:
-- Lunch Yakisoba Shrimp 19.95 and Yakisoba Steak 24.95 (photo blurred by hand)
-- Sushi "Spanish Mackerel 25.00" (reads high next to 6-8 dollar nigiri —
-  possibly a menu typo, transcribed as printed)
-- Sashimi Tamago listed MP as printed
-- Kids "Kodomo Shrimp 18.50" (slightly obscured)
+All DINNER prices and the DRINKS tab are confirmed against the print
+artwork from Minuteman Press (Sep 2026). The brush logo (assets/logo.svg)
+is extracted from the printer's vector PDF; favicon + apple-touch-icon
+generated from it. Tagline per the cover: "Teppan Steak House & Sushi Bar".
+
+### Remaining transcription flags — confirm with owner:
+- Lunch Yakisoba Shrimp 19.95 / Yakisoba Steak 24.95 (photo blurred; the
+  print artwork only covered dinner + drinks)
+- Sushi "Spanish Mackerel 25.00" (as printed; reads like a possible typo)
 
 ## Remaining [OWNER] items (search "OWNER" — 6 spots)
 - Hero photo (currently the old stock flame — swap assets/hero-flame.jpg)
