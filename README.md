@@ -1,7 +1,14 @@
-# Wabi Sabi Steak House & Sushi Bar — website (light theme)
+# Wabi Sabi Teppan Steak House & Sushi Bar — website (dark theme)
 
-Static site, no build step. index.html + assets/. Theme matches the physical
-menu: cream paper, crimson headers (Milker font), Nexa item text, navy accents.
+Static site, no build step. index.html + assets/. Dark theme: warm
+charcoal, brand red, cream text, Milker/Nexa fonts, brush logo
+(assets/logo-cream.svg for dark surfaces, logo.svg red for light).
+
+Desktop hero: pinned scroll choreography — the flame opens from a clipped
+frame, de-zooms, then the logo plate fades in. Ambient "simmer" (slow zoom
+drift + SVG heat-shimmer). Mobile: static full-bleed hero, simmer only,
+no scroll-jacking. Menu tabs: Appetizers / Drinks / Teppan Lunch & Dinner
+/ Sushi.
 
 ## Deploy
 Push to the existing repo → Vercel auto-deploys. Files belong at repo ROOT.
