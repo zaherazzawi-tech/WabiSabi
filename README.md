@@ -1,8 +1,10 @@
-# Wabi Sabi Teppan Steak House & Sushi Bar — website (dark theme)
+# Wabi Sabi Teppan Steak House & Sushi Bar — website (navy/periwinkle theme)
 
-Static site, no build step. index.html + assets/. Dark theme: warm
-charcoal, brand red, cream text, Milker/Nexa fonts, brush logo
-(assets/logo-cream.svg for dark surfaces, logo.svg red for light).
+Static site, no build step. index.html + assets/. Navy/periwinkle theme
+(the original "blue look"): deep navy bg, periwinkle accents, all menu
+item names & prices in white, Milker/Nexa fonts, cream brush logo.
+Sections: hero / facts / menu / Our Story / The Room (photo boxes marked
+"Coming soon") / Visit.
 
 Desktop hero: pinned scroll choreography — the flame opens from a clipped
 frame, de-zooms, then the logo plate fades in. Ambient "simmer" (slow zoom
