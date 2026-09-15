@@ -146,6 +146,9 @@ section { padding: clamp(56px, 9vh, 104px) clamp(16px, 4vw, 44px); }
 .big-phone { font-family: 'Milker'; font-size: clamp(30px, 4vw, 44px); color: var(--ink); text-decoration: none; }
 .big-phone:hover { color: var(--red); }
 
+.map-wrap { margin-top: clamp(30px, 5vh, 48px); border-radius: 16px; overflow: hidden;
+  border: 1px solid var(--line); background: var(--card); }
+.map-wrap iframe { display: block; width: 100%; height: 420px; border: 0; }
 /* ── Footer ── */
 footer { background: #0A0B12; color: var(--ink); padding: 34px clamp(16px, 4vw, 44px); }
 .foot-in { max-width: 1240px; margin: 0 auto; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
@@ -179,6 +182,7 @@ footer { background: #0A0B12; color: var(--ink); padding: 34px clamp(16px, 4vw, 
   .two-col { grid-template-columns: 1fr; }
   .tabs { position: sticky; top: 56px; z-index: 40; background: var(--bg); padding: 10px 0; margin: 16px 0 22px; }
   .tab { padding: 10px 16px; font-size: 12px; }
+  .map-wrap iframe { height: 280px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-zoom img, .hero-shimmer img { animation: none; }
@@ -303,6 +307,12 @@ footer { background: #0A0B12; color: var(--ink); padding: 34px clamp(16px, 4vw, 
         <p><a href="https://maps.google.com/?q=Wabi+Sabi+Steak+House+%26+Sushi+Bar+11837+Foothill+Blvd+Rancho+Cucamonga" target="_blank" rel="noopener">Open in Google Maps</a><br>
         <span style="color: var(--muted); font-size: 14px;">Takeout available — order by phone</span></p>
       </div>
+    </div>
+    <div class="map-wrap">
+      <iframe
+        title="Map to Wabi Sabi Teppan Steak House &amp; Sushi Bar, 11837 Foothill Blvd Ste B, Rancho Cucamonga"
+        src="https://www.google.com/maps?q=Wabi+Sabi+Steak+House+%26+Sushi+Bar,+11837+Foothill+Blvd+Ste+B,+Rancho+Cucamonga,+CA+91730&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
     </div>
   </div>
 </section>

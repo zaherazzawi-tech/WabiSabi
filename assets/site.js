@@ -14,11 +14,28 @@
   function isMobile() { return window.matchMedia(MOBILE).matches; }
 
   var HERO_SCROLL = 1500;
+  var heroDone = false; /* the opening plays once per page load */
+  function finishHero(sec) {
+    heroDone = true;
+    var clip = sec.querySelector('[data-ws-clip]');
+    if (clip) clip.style.clipPath = 'none';
+    var zoom = sec.querySelector('[data-ws-zoom]');
+    if (zoom) zoom.style.transform = 'scale(1)';
+    var plate = sec.querySelector('[data-ws-plate]');
+    if (plate) { plate.style.opacity = '1'; plate.style.transform = 'none'; plate.style.pointerEvents = 'auto'; }
+    var cue = sec.querySelector('[data-ws-cue]');
+    if (cue) cue.style.opacity = '0';
+    /* collapse the scroll track so scrolling back up doesn't replay it */
+    var removed = sec.offsetHeight - window.innerHeight;
+    sec.style.height = '100vh';
+    window.scrollTo({ top: Math.max(0, window.scrollY - removed), behavior: 'instant' });
+  }
   function syncHero() {
-    if (isMobile()) return; /* mobile hero is fully static via CSS */
+    if (isMobile() || heroDone) return; /* mobile hero is fully static via CSS */
     var sec = document.querySelector('[data-ws-hero]');
     if (!sec) return;
     var p = Math.min(1, Math.max(0, -sec.getBoundingClientRect().top / HERO_SCROLL));
+    if (p >= 1) { finishHero(sec); return; }
     var clip = sec.querySelector('[data-ws-clip]');
     if (clip) {
       var a = (25 * (1 - p)).toFixed(2), b = (75 + 25 * p).toFixed(2);
