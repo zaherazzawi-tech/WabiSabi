@@ -89,7 +89,9 @@ nav .btn { padding: 10px 18px; }
 section { padding: clamp(56px, 9vh, 104px) clamp(16px, 4vw, 44px); }
 .wrap { max-width: 1240px; margin: 0 auto; }
 .sec-head { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; margin-bottom: 10px; }
-.sec-head h2 { font-family: 'Milker'; font-size: clamp(34px, 5vw, 56px); color: var(--red); text-transform: uppercase; }
+.sec-head { flex-direction: column; align-items: flex-start; gap: 4px; }
+.sec-head h2 { font-family: 'Milker'; font-size: clamp(40px, 6vw, 68px); color: var(--red); text-transform: uppercase; }
+.sec-head .sub { font-weight: 700; font-size: 13px; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); }
 .sec-lede { color: var(--muted); max-width: 62ch; }
 
 /* ── Menu ── */
@@ -149,6 +151,13 @@ section { padding: clamp(56px, 9vh, 104px) clamp(16px, 4vw, 44px); }
 .map-wrap { margin-top: clamp(30px, 5vh, 48px); border-radius: 16px; overflow: hidden;
   border: 1px solid var(--line); background: var(--card); }
 .map-wrap iframe { display: block; width: 100%; height: 420px; border: 0; }
+.known { background: var(--bg); padding: clamp(26px, 4vh, 40px) clamp(16px, 4vw, 44px) 0; }
+.known-in { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.k-card { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+  padding: 22px 24px; text-decoration: none; transition: border-color .2s, transform .2s; }
+.k-card:hover { border-color: var(--red); transform: translateY(-2px); }
+.k-title { font-family: 'Milker'; font-size: 20px; color: var(--red); text-transform: uppercase; margin-bottom: 6px; }
+.k-sub { font-size: 14px; color: var(--muted); }
 /* ── Footer ── */
 footer { background: #0A0B12; color: var(--ink); padding: 34px clamp(16px, 4vw, 44px); }
 .foot-in { max-width: 1240px; margin: 0 auto; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
@@ -183,6 +192,7 @@ footer { background: #0A0B12; color: var(--ink); padding: 34px clamp(16px, 4vw, 
   .tabs { position: sticky; top: 56px; z-index: 40; background: var(--bg); padding: 10px 0; margin: 16px 0 22px; }
   .tab { padding: 10px 16px; font-size: 12px; }
   .map-wrap iframe { height: 280px; }
+  .known-in { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-zoom img, .hero-shimmer img { animation: none; }
@@ -233,23 +243,38 @@ footer { background: #0A0B12; color: var(--ink); padding: 34px clamp(16px, 4vw, 
   </div>
 </div>
 
-<section id="story">
+
+<div class="known">
+  <div class="known-in">
+    <a class="k-card" href="#menu">
+      <div class="k-title">Signature Deluxe</div>
+      <div class="k-sub">Filet mignon &amp; lobster tail dinners, seared tableside</div>
+    </a>
+    <a class="k-card" href="#menu">
+      <div class="k-title">Specialty Rolls</div>
+      <div class="k-sub">The Cucamonga Roll and twenty-plus house creations</div>
+    </a>
+    <a class="k-card" href="https://maps.google.com/?q=Wabi+Sabi+Steak+House+%26+Sushi+Bar+11837+Foothill+Blvd+Rancho+Cucamonga" target="_blank" rel="noopener">
+      <div class="k-title">4.5 &#9733; on Google</div>
+      <div class="k-sub">900+ reviews from Rancho Cucamonga</div>
+    </a>
+  </div>
+</div>
+
+<section id="story" style="padding-top: clamp(36px, 5vh, 56px);">
   <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Our Story</div><h2>Two counters, one room</h2></div>
+    <div class="sec-head"><h2>Our Story</h2><div class="sub">Two counters, one room</div></div>
     <div class="about-cols">
       <div>
-        <p>Wabi sabi is the Japanese idea that things are most beautiful when they're honest —
-        a little imperfect, made by hand, right in front of you. That's the whole restaurant.</p>
-        <p>On Foothill Blvd we run two counters in one room: iron teppan tables where the chefs
-        cook dinner in front of you — and put on a show while they do it — and a sushi bar where
-        everything is cut to order.</p>
-        <p class="owner-note">[OWNER: add your history — when you opened, who runs the kitchen]</p>
+        <p>Our mission is variety without compromise. Most kitchens choose one craft; we practice
+        two — teppanyaki seared at your table and sushi cut to order at the bar — and hold both
+        to the same standard: fresh ingredients, generous portions, prepared in front of you.</p>
+        <!-- OWNER: add your history here — when you opened, who runs the kitchen -->
       </div>
       <div>
-        <p>Big portions, generous with the fried rice, easy with kids and big groups. The full
-        bar pours beer, wine, sake and cocktails through lunch and dinner.</p>
-        <p>Ten teppan tables seat everything from a date night to a birthday party of twelve.
-        Walk-ins welcome; for larger parties, call ahead and we'll set the table.</p>
+        <p>Ten teppan tables, a full sushi bar, and a full bar seat everything from a quiet date
+        night to a birthday party of twelve. Walk-ins are welcome seven days a week; for larger
+        parties, call ahead and we'll set the table.</p>
       </div>
     </div>
   </div>
@@ -257,7 +282,7 @@ footer { background: #0A0B12; color: var(--ink); padding: 34px clamp(16px, 4vw, 
 
 <section id="menu">
   <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">The Menu</div><h2>Iron plate, cold stone</h2></div>
+    <div class="sec-head"><h2>The Menu</h2><div class="sub">Iron plate, cold stone</div></div>
     <p class="sec-lede">The whole menu, straight from the kitchen. Prices may change — call for today's.</p>
     <div class="tabs" role="tablist">
       <button class="tab" role="tab" aria-selected="true" data-panel="p-apps">Appetizers</button>
@@ -274,7 +299,7 @@ footer { background: #0A0B12; color: var(--ink); padding: 34px clamp(16px, 4vw, 
 </section>
 <section id="room">
   <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">The Room</div><h2>You watch it happen</h2></div>
+    <div class="sec-head"><h2>The Room</h2><div class="sub">You watch it happen</div></div>
     <div class="gallery">
       <div class="img-slot" role="img" aria-label="The teppan show photo coming soon">The teppan show<br><span class="soon">Coming soon</span></div>
       <div class="img-slot" role="img" aria-label="The sushi bar photo coming soon">The sushi bar<br><span class="soon">Coming soon</span></div>
@@ -286,7 +311,7 @@ footer { background: #0A0B12; color: var(--ink); padding: 34px clamp(16px, 4vw, 
 
 <section id="visit">
   <div class="wrap">
-    <div class="sec-head"><div class="eyebrow">Visit</div><h2>Reservations by telephone</h2></div>
+    <div class="sec-head"><h2>Visit</h2><div class="sub">Reservations by telephone</div></div>
     <a class="big-phone" href="tel:+19095811055">(909) 581-1055</a>
     <p class="sec-lede">Call during service hours to book a table or place a takeout order.
        Walk-ins welcome — for larger parties, call ahead.</p>
