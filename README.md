@@ -40,7 +40,7 @@ generated from it. Tagline per the cover: "Teppan Steak House & Sushi Bar".
 ## Facts baked in (real)
 (909) 581-1055 · 11837 Foothill Blvd Ste B, Rancho Cucamonga 91730
 Hours M–Th 11–2:30/4:30–9:30, Fri 11–2:30/4:30–10, Sat 11:30–2:30/4:30–10,
-Sun 11:30–2:30/4:30–9:30 · 10 teppan tables · full sushi bar · full bar ·
+Sun closed · 10 teppan tables · full sushi bar · full bar ·
 dine in + take out
 
 ## Behavior
